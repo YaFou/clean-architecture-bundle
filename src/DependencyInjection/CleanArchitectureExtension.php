@@ -16,7 +16,7 @@ class CleanArchitectureExtension extends Extension
      */
     public function load(array $configs, ContainerBuilder $container): void
     {
-        $loader = new PhpFileLoader($container, new FileLocator(dirname(__DIR__ . '/Resources')));
+        $loader = new PhpFileLoader($container, new FileLocator(dirname(__DIR__) . '/Resources'));
         $loader->load('config.php');
     }
 }
