@@ -1,0 +1,46 @@
+{
+    "name": "yafou/clean-architecture-bundle",
+    "homepage": "https://github.com/YaFou/clean-architecture-utilities",
+    "description": "A powerful adapter for the business logic with Symfony",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "type": "symfony-bundle",
+    "authors": [
+        {
+            "name": "Yannis Foucher",
+            "homepage": "https://github.com/YaFou"
+        }
+    ],
+    "prefer-stable": true,
+    "require": {
+        "php": "^7.3 || ^8.0",
+        "symfony/config": "^5.2",
+        "symfony/dependency-injection": "^4.0 || ^5.0",
+        "symfony/http-kernel": "^4.0 || ^5.0",
+        "symfony/security-core": "^5.2",
+        "symfony/validator": "^5.2",
+        "yafou/clean-architecture-utilities": "^0.1.0"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^0.12.64",
+        "squizlabs/php_codesniffer": "^3.5.8",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "YaFou\\CleanArchitectureBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "YaFou\\CleanArchitectureBundle\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "preferred-install": {
+            "*": "dist"
+        },
+        "optimize-autoloader": true
+    }
+}

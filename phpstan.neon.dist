@@ -1,0 +1,8 @@
+parameters:
+    level: 8
+    paths:
+        - src
+        - tests
+    ignoreErrors:
+        - message: '#Method [a-zA-Z0-9\\_]+::[a-zA-Z0-9]+\(\) has no return typehint specified.#'
+          path: tests/*
