@@ -19,7 +19,7 @@
         "symfony/http-kernel": "^4.0 || ^5.0",
         "symfony/security-core": "^5.2",
         "symfony/validator": "^5.2",
-        "yafou/clean-architecture-utilities": "^0.1.0"
+        "yafou/clean-architecture-utilities": "^0.2.0"
     },
     "require-dev": {
         "phpstan/phpstan": "^0.12.64",

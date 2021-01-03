@@ -27,12 +27,18 @@ class Assertion implements AssertionInterface
      * @var ValidatorInterface
      */
     private $validator;
+    /**
+     * @var mixed
+     */
     private $value;
     /**
      * @var string|null
      */
     private $propertyPath;
 
+    /**
+     * @param mixed $value
+     */
     public function __construct(ValidatorInterface $validator, $value, ?string $propertyPath = null)
     {
         $this->validator = $validator;
@@ -58,6 +64,10 @@ class Assertion implements AssertionInterface
         $this->errors = array_merge($this->errors, $this->convertViolationsToErrors($violations));
     }
 
+    /**
+     * @param ConstraintViolationListInterface<ConstraintViolationInterface> $violations
+     * @return Error[]
+     */
     private function convertViolationsToErrors(ConstraintViolationListInterface $violations): array
     {
         return array_map(

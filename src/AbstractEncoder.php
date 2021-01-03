@@ -25,7 +25,7 @@ abstract class AbstractEncoder implements EncoderInterface
         return $this->encoder->encodePassword($this->getUser(), $plainPassword);
     }
 
-    public function isValid(string $password, string $plainPassword): string
+    public function isValid(string $password, string $plainPassword): bool
     {
         return $this->encoder->isPasswordValid($this->getUser($password), $plainPassword);
     }

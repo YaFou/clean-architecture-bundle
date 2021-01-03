@@ -30,7 +30,7 @@ class Validator implements ValidatorInterface
 
     public function getErrors(): ErrorList
     {
-        $errors = array_map(function(Assertion $assertion) {
+        $errors = array_map(function (Assertion $assertion) {
             return $assertion->getErrors();
         }, $this->assertions);
 
